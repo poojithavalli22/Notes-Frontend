@@ -1,0 +1,42 @@
+<!-- src/app/components/add-note-page/add-note-page.component.html -->
+<div class="add-note-container">
+  <h2 class="form-title">New Note</h2>
+  <form>
+    <div class="form-group">
+      <label for="note-title" class="field-label">Title</label>
+      <mat-form-field appearance="fill" class="full-width">
+        <input
+          matInput
+          id="note-title"
+          [(ngModel)]="note.title"
+          name="title"
+          required
+          placeholder="Enter a title for your note"
+        >
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <label for="note-content" class="field-label">Content</label>
+      <mat-form-field appearance="fill" class="full-width">
+        <textarea
+          matInput
+          id="note-content"
+          [(ngModel)]="note.content"
+          name="content"
+          rows="10"
+          required
+          placeholder="Write your note here..."
+        ></textarea>
+      </mat-form-field>
+    </div>
+    <div *ngIf="generatedTitle" class="generated-title">
+      <strong>Generated Title:</strong> {{ generatedTitle }}
+    </div>
+    <div class="actions">
+      <button mat-raised-button color="primary" type="button" (click)="saveNote()" [disabled]="!note.title || !note.content || loading" class="save-btn">
+        Save Note
+      </button>
+      <button mat-button type="button" (click)="close()" class="close-btn">Close</button>
+    </div>
+  </form>
+</div>

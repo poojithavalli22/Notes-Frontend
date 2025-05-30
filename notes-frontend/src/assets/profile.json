@@ -1,0 +1,21 @@
+{
+  "personal": {
+    "imageUrl": "assets/images/DPS_image.png",
+    "name": "Poojitha Valli Pogaku",
+    "email": "poojithappv2205@gmail.com",
+    "mobile": "+91 1234567890"
+  },
+  "education": {
+    "college": "Srinivasa Ramanujan Institute of Technology",
+    "location": "Anatapur, Andhra Pradesh",
+    "score": "9.7 CGPA"
+  },
+  "codingProfiles": {
+    "leetcode": "https://leetcode.com/poojithappv2205",
+    "codeChef": "https://codechef.com/users/poojithappv",
+    "geeksForGeeks": "https://auth.geeksforgeeks.org/user/poojithappv22",
+    "hackerRank": "https://www.hackerrank.com/poojithappv2205",
+    "github": "https://github.com/poojithavalli22",
+    "linkedin": "https://www.linkedin.com/in/poojitha-valli-8a4274253/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  }
+}

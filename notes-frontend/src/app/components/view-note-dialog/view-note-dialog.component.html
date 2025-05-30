@@ -1,0 +1,67 @@
+<div class="add-note-container">
+  <h2 class="form-title">View Note</h2>
+  <form>
+    <div class="form-group">
+      <label for="note-title" class="field-label">Title</label>
+      <mat-form-field appearance="fill" class="full-width">
+        <input
+          matInput
+          id="note-title"
+          [value]="data.title"
+          disabled
+          placeholder="Note title"
+        >
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <label for="note-content" class="field-label">Content</label>
+      <mat-form-field appearance="fill" class="full-width">
+                <textarea
+                  matInput
+                  id="note-content"
+                  [value]="data.content"
+                  rows="10"
+                  disabled
+                  placeholder="Note content"
+                ></textarea>
+      </mat-form-field>
+    </div>
+    <div class="form-group" *ngIf="summary || loading">
+      <label for="note-summary" class="field-label">Your Notes Summary</label>
+      <mat-form-field appearance="fill" class="full-width">
+                <textarea
+                  matInput
+                  id="note-summary"
+                  [(ngModel)]="summary"
+                  name="summary"
+                  rows="4"
+                  disabled
+                  placeholder="Generated summary will appear here"
+                ></textarea>
+        <mat-progress-spinner
+          *ngIf="loading"
+          matSuffix
+          [diameter]="20"
+          mode="indeterminate">
+        </mat-progress-spinner>
+      </mat-form-field>
+    </div>
+    <div class="actions">
+      <button
+        mat-raised-button
+        type="button"
+        class="summarize-btn"
+        (click)="summarizeNote()"
+        [disabled]="loading">
+        {{ loading ? 'Summarizing...' : 'Summarize' }}
+      </button>
+      <button
+        mat-button
+        type="button"
+        (click)="close()"
+        class="close-btn">
+        Close
+      </button>
+    </div>
+  </form>
+</div>

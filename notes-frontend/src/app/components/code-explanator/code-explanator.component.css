@@ -1,0 +1,191 @@
+/* Styling for the select dropdown */
+::ng-deep .mat-mdc-form-field.mat-form-field-appearance-fill .mdc-text-field {
+  background-color: #f1f8e9;
+  border-radius: 6px;
+}
+
+::ng-deep .mat-mdc-select-panel {
+  background: #f1f8e9;
+  border-radius: 6px !important;
+}
+
+::ng-deep .mat-mdc-option {
+  color: #00695c !important;
+}
+
+::ng-deep .mat-mdc-option:hover:not(.mdc-list-item--disabled) {
+  background: #e0f2f1 !important;
+}
+
+::ng-deep .mat-mdc-option.mdc-list-item--selected {
+  background: #b2dfdb !important;
+  color: #00897b !important;
+}
+
+::ng-deep .mat-mdc-form-field.mat-focused .mdc-floating-label {
+  color: #00897b !important;
+}
+
+::ng-deep .mat-mdc-form-field.mat-focused .mdc-notched-outline__leading,
+::ng-deep .mat-mdc-form-field.mat-focused .mdc-notched-outline__notch,
+::ng-deep .mat-mdc-form-field.mat-focused .mdc-notched-outline__trailing {
+  border-color: #26a69a !important;
+}
+
+::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: #f1f8e9 !important;
+}
+
+::ng-deep .mat-mdc-select-value-text {
+  color: #00695c !important;
+}
+
+::ng-deep .mat-mdc-form-field:not(.mat-focused) .mat-mdc-floating-label {
+  color: #00897b !important;
+}
+
+/* Adjust dropdown width to match other fields */
+.language-select {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Style for the select arrow */
+::ng-deep .mat-mdc-select-arrow {
+  color: #00897b !important;
+}
+
+/* Style for the placeholder */
+::ng-deep .mat-mdc-select-placeholder {
+  color: rgba(0, 105, 92, 0.6) !important;
+}
+
+/* Style for focused state outline */
+::ng-deep .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: #00897b !important;
+}
+
+/* Hover state for the select field */
+::ng-deep .mat-mdc-form-field:hover .mdc-text-field {
+  background-color: #e8f5e9 !important;
+}
+
+
+
+
+.code-explanator-container {
+  max-width: 1400px;
+  min-height: 600px;
+  margin: 60px auto;
+  padding: 32px 28px 28px 28px;
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 12px 48px 0 rgba(38, 166, 154, 0.28), 0 2px 8px rgba(0,0,0,0.08);
+  background: linear-gradient(135deg, #b2dfdb 0%, #e0f7fa 100%);
+}
+
+.form-title {
+  font-family: 'Brush Script MT', cursive, 'Comic Sans MS', 'Dancing Script', sans-serif;
+  font-size: 2.2rem;
+  color: #00897b;
+  text-align: center;
+  margin-bottom: 28px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #00897b;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #f1f8e9;
+  border-radius: 6px;
+}
+
+.explanation-section {
+  margin: 18px 0;
+}
+
+.explanation-content {
+  background: #e0f2f1;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #26a69a;
+  color: #00695c;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 8px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+button.close-btn {
+  color: #26a69a;
+  border: 1px solid #26a69a;
+  background: #fff;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+button.close-btn:hover {
+  background: #e0f2f1;
+  color: #004d40;
+}
+
+button.save-btn,
+button.mat-raised-button {
+  background: linear-gradient(90deg, #26a69a 0%, #80cbc4 100%);
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(38, 166, 154, 0.10);
+  transition: background 0.2s;
+}
+
+button.save-btn:hover,
+button.mat-raised-button:hover {
+  background: linear-gradient(90deg, #00897b 0%, #4db6ac 100%);
+}
+
+button {
+  min-width: 120px;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .code-explanator-container {
+    max-width: 98vw;
+    padding: 18px 6vw;
+    margin: 24px 0;
+  }
+
+  .actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+    min-width: unset;
+  }
+}

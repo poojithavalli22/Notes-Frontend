@@ -1,0 +1,52 @@
+<div class="code-explanator-container">
+  <h2 class="form-title">Code Explanator</h2>
+  <form>
+    <div class="form-group">
+      <label for="code-input" class="field-label">Your Code</label>
+      <mat-form-field appearance="fill" class="full-width">
+        <textarea
+          matInput
+          id="code-input"
+          [(ngModel)]="inputText"
+          name="inputText"
+          rows="10"
+          required
+          placeholder="Paste your code here..."
+        ></textarea>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <label for="language-select" class="field-label">Language</label>
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-select
+          id="language-select"
+          [(ngModel)]="selectedLanguage"
+          name="language"
+          required
+          placeholder="Select Language">
+          <mat-option *ngFor="let lang of languages" [value]="lang.value">
+            {{lang.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div *ngIf="explanation" class="explanation-section">
+      <label class="field-label">Explanation</label>
+      <div class="explanation-content">
+        {{ explanation }}
+      </div>
+    </div>
+
+    <div class="actions">
+      <button mat-raised-button color="primary" type="button"
+              (click)="explainCode()"
+              [disabled]="!inputText || !selectedLanguage || loading"
+              class="save-btn">
+        Explain
+      </button>
+      <button mat-button type="button" (click)="close()" class="close-btn">Close</button>
+    </div>
+  </form>
+</div>

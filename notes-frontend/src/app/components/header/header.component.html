@@ -1,0 +1,25 @@
+<header class="header">
+  <div class="header-content">
+    <div class="logo-section">
+      <h1 routerLink="/" class="app-title">PPVs Notable AI</h1>
+    </div>
+    <nav class="nav-links">
+      <a mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <mat-icon>home</mat-icon>
+        Notes
+      </a>
+      <a mat-button routerLink="/add-note" routerLinkActive="active">
+        <mat-icon>note_add</mat-icon>
+        Add Note
+      </a>
+      <a mat-button routerLink="/code-explanator" routerLinkActive="active">
+        <mat-icon>code</mat-icon>
+        Code Explanator
+      </a>
+      <a mat-button routerLink="/profile" routerLinkActive="active">
+        <mat-icon>account_circle</mat-icon>
+        My Profile
+      </a>
+    </nav>
+  </div>
+</header>
